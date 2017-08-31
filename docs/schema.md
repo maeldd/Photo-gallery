@@ -43,8 +43,6 @@ id              | integer   | not null, primary key
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
-business_name   | string    | not null
-website         | string    | not null
 username        | string    | not null, unique
 screenshot      | string    |
 avatar          | string    |

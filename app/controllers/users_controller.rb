@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 
   def activate
     @user = User.find_by(activation_token: params[:activation_token])
-    
+
     if @user
       @user.activated = true
       @user.activation_token = SecureRandom::urlsafe_base64
@@ -112,7 +112,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:business_name, :website, :email, :password, :username)
+      params.require(:user).permit(:email, :password)
     end
 
     def if_logged_in
